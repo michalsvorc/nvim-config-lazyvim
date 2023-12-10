@@ -5,3 +5,33 @@ local map = vim.keymap.set
 
 -- https://github.com/luukvbaal/nnn.nvim
 map("n", "<leader>fp", "<cmd>NnnPicker<cr>", { desc = "File picker" })
+
+-- https://github.com/nvim-telescope/telescope-live-grep-args.nvim
+local live_grep_args_shortcuts = require("telescope-live-grep-args.shortcuts")
+
+map(
+  "n",
+  "<leader>/",
+  ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
+  { desc = "Grep +args (root dir)" }
+)
+map(
+  "n",
+  "<leader>sg",
+  ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
+  { desc = "Grep +args (root dir)" }
+)
+map(
+  "n",
+  "<leader>sG",
+  ":lua require('telescope').extensions.live_grep_args.live_grep_args({ cwd = false })<CR>",
+  { desc = "Grep +args (cwd)" }
+)
+map("n", "<leader>sw", live_grep_args_shortcuts.grep_word_under_cursor, { desc = "Word +args (root dir)" })
+map(
+  "n",
+  "<leader>sW",
+  ":lua require('telescope-live-grep-args.shortcuts').grep_word_under_cursor({ cwd = false })<CR>",
+  { desc = "Word +args (cwd)" }
+)
+map("v", "<leader>sw", live_grep_args_shortcuts.grep_visual_selection, { desc = "Selection +args (root dir)" })
