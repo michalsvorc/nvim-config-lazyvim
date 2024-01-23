@@ -35,3 +35,5 @@ map(
   { desc = "Word +args (cwd)" }
 )
 map("v", "<leader>sw", live_grep_args_shortcuts.grep_visual_selection, { desc = "Selection +args (root dir)" })
+
+map("x", "<leader>d", CompareToClipboard, { desc = "Compare clipboard with visual selection" })
