@@ -9,9 +9,23 @@ map("n", "<leader>fp", "<cmd>NnnPicker<cr>", { desc = "File picker" })
 
 -- Telescope
 
---- Search quickfix list
+--- Quickfix list
 map("n", "<leader>sq", ":lua require('telescope.builtin').quickfix()<CR>", { desc = "Quickfix" })
 map("n", "<leader>sQ", ":lua require('telescope.builtin').quickfixhistory()<CR>", { desc = "Quickfix history" })
+
+--- Buffers
+map(
+  "n",
+  "<leader>sBg",
+  ":lua require('telescope.builtin').grep_string({ grep_open_files=true, search='' })<CR>",
+  { desc = "Grep (buffers)" }
+)
+map(
+  "n",
+  "<leader>sBw",
+  ":lua require('telescope.builtin').grep_string({ grep_open_files=true })<CR>",
+  { desc = "Selection (buffers)" }
+)
 
 -- Telescope live grep args
 -- https://github.com/nvim-telescope/telescope-live-grep-args.nvim
