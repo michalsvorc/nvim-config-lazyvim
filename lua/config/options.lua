@@ -6,3 +6,6 @@ vim.wo.conceallevel = 0
 -- Spelling
 vim.opt.spelllang = "en_us"
 vim.opt.spell = true
+
+-- LOCAL
+vim.g.autoformat = false
