@@ -34,8 +34,8 @@ local live_grep_args_shortcuts = require("telescope-live-grep-args.shortcuts")
 map(
   "n",
   "<leader>/",
-  ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
-  { desc = "Grep +args (root dir)" }
+  "<cmd>Telescope current_buffer_fuzzy_find<CR>",
+  { desc = "Grep (current buffer)" }
 )
 map(
   "n",
