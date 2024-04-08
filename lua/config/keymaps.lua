@@ -65,3 +65,7 @@ map("x", "<leader>d", CompareToClipboard, { desc = "Compare clipboard with visua
 --- Buffer picker
 map("n", "<leader>bs", "<cmd>BufferLinePick<CR>", { desc = "Buffer picker" })
 map("n", "<leader>bx", "<cmd>BufferLinePickClose<CR>", { desc = "Buffer picker close" })
+
+-- Disabled
+--- Lazygit Current File History
+vim.keymap.del("n", "<leader>gf")
