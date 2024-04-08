@@ -2,11 +2,14 @@ return {
   "folke/noice.nvim",
   opts = {
     cmdline = {
-      enabled = true, -- enables the Noice cmdline UI
+      enabled = false, -- enables the Noice cmdline UI
       view = "cmdline", -- view for rendering the cmdline. Change to `cmdline` to get a classic cmdline at the bottom
     },
     popupmenu = {
-      enabled = true, -- enables the Noice popupmenu UILeave
+      enabled = false, -- enables the Noice popupmenu UILeave
+    },
+    messages = {
+      enabled = false,
     },
   },
 }
