@@ -33,4 +33,10 @@ return {
       mode = "v",
     },
   },
+  opts = {
+    defaults = {
+      layout_strategy = "horizontal",
+      layout_config = { height = 0.99, width = 0.99, preview_width = 0.6 },
+    },
+  },
 }
