@@ -31,12 +31,7 @@ map(
 -- https://github.com/nvim-telescope/telescope-live-grep-args.nvim
 local live_grep_args_shortcuts = require("telescope-live-grep-args.shortcuts")
 
-map(
-  "n",
-  "<leader>/",
-  "<cmd>Telescope current_buffer_fuzzy_find<CR>",
-  { desc = "Grep (current buffer)" }
-)
+map("n", "<leader>/", "<cmd>Telescope current_buffer_fuzzy_find<CR>", { desc = "Grep (current buffer)" })
 map(
   "n",
   "<leader>sg",
@@ -65,3 +60,7 @@ map("x", "<leader>d", CompareToClipboard, { desc = "Compare clipboard with visua
 --- Buffer picker
 map("n", "<leader>bs", "<cmd>BufferLinePick<CR>", { desc = "Buffer picker" })
 map("n", "<leader>bx", "<cmd>BufferLinePickClose<CR>", { desc = "Buffer picker close" })
+
+-- Disabled
+--- Lazygit Current File History
+vim.keymap.del("n", "<leader>gf")

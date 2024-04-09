@@ -9,3 +9,6 @@ vim.opt.spell = true
 
 -- LOCAL
 vim.g.autoformat = false
+
+-- Setting wildoptions
+vim.o.wildoptions = "fuzzy"
