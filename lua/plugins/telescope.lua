@@ -33,10 +33,18 @@ return {
       mode = "v",
     },
   },
-  opts = {
-    defaults = {
-      layout_strategy = "horizontal",
-      layout_config = { height = 0.99, width = 0.99 },
-    },
-  },
+  config = function()
+    require("telescope").setup({
+      defaults = {
+        layout_strategy = "horizontal",
+        layout_config = { height = 0.99, width = 0.99 },
+      },
+      extensions = {
+        file_browser = {
+          hijack_netrw = true,
+        },
+      },
+    })
+    require("telescope").load_extension("file_browser")
+  end,
 }
