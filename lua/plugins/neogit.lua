@@ -6,7 +6,6 @@ return {
     "nvim-telescope/telescope.nvim",
   },
   config = true,
-  lazy = true,
   keys = {
     {
       "<leader>gg",

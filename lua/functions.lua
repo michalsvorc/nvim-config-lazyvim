@@ -27,13 +27,5 @@ function CompareToClipboard()
   ))
 end
 
--- Extract a quickfix sub-list
-function SetQFList(start, finish)
-  vim.cmd(string.format("call setqflist(getqflist()[%d:%d])", start, finish))
-end
-vim.cmd([[
-  command! -nargs=* -complete=customlist,SetQFList SetQFList lua SetQFList(<f-args>)
-]])
-
 -- Sportradar lint fix
 vim.cmd([[command! -nargs=0 -bar AliFix execute "!npm run lint:fix " .. expand('%') .. " &> /dev/null"]])

@@ -7,6 +7,4 @@ return {
     { "fxc", "<cmd>Telescope tmux pane_contents<CR>", mode = { "n" }, desc = "Tmux pane contents" },
     { "fxf", "<cmd>Telescope tmux pane_file_paths<CR>", mode = { "n" }, desc = "Tmux file paths" },
   },
-  lazy = true,
 }
-

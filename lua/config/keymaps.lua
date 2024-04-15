@@ -3,10 +3,6 @@
 -- Add any additional keymaps here
 local map = vim.keymap.set
 
--- nnn picker
--- https://github.com/luukvbaal/nnn.nvim
-map("n", "<leader>fp", "<cmd>NnnPicker<CR>", { desc = "File picker" })
-
 -- Telescope
 
 --- Quickfix list
