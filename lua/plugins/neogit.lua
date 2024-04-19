@@ -5,7 +5,18 @@ return {
     "nvim-lua/plenary.nvim",
     "nvim-telescope/telescope.nvim",
   },
-  config = true,
+  config = function()
+    require("neogit").setup({
+      disable_hint = true,
+      kind = "tab",
+      commit_editor = {
+        kind = "vsplit",
+      },
+      integrations = {
+        telescope = true,
+      },
+    })
+  end,
   keys = {
     {
       "<leader>gg",
