@@ -1,8 +1,3 @@
--- Copy buffer path
-vim.cmd([[command! CopyBufferAbsolutePath lua vim.fn.setreg('+', vim.fn.expand('%:p'))]])
-vim.cmd([[command! CopyBufferFileName lua vim.fn.setreg('+', vim.fn.expand('%:t'))]])
-vim.cmd([[command! CopyBufferPathRelativeToCwd lua vim.fn.setreg('+', vim.fn.expand('%:p:~:.'))]])
-
 -- Compare clipboard with visual selection
 -- https://www.reddit.com/r/neovim/comments/uodipg/how_to_compare_clipboard_with_visual_selection/
 function CompareToClipboard()
