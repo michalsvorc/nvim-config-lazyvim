@@ -54,6 +54,7 @@ map("x", "<leader>d", CompareToClipboard, { desc = "Compare clipboard with visua
 
 -- Buffers
 map("n", "<leader>bdo", BufferDeleteOthers, { desc = "Delete other buffers" })
+map("n", "<leader>be", ":lua require('telescope.builtin').buffers()<CR>", { desc = "Buffer Explorer" })
 
 -- Disabled
 --- Lazygit Current File History
