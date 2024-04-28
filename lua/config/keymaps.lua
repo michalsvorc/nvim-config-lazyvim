@@ -52,11 +52,6 @@ map("v", "<leader>sw", live_grep_args_shortcuts.grep_visual_selection, { desc = 
 -- Compare clipboard with visual selection
 map("x", "<leader>d", CompareToClipboard, { desc = "Compare clipboard with visual selection" })
 
--- Buffers
---- Buffer picker
-map("n", "<leader>bs", "<cmd>BufferLinePick<CR>", { desc = "Buffer picker" })
-map("n", "<leader>bx", "<cmd>BufferLinePickClose<CR>", { desc = "Buffer picker close" })
-
 -- Disabled
 --- Lazygit Current File History
 vim.keymap.del("n", "<leader>gf")
