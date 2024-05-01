@@ -7,7 +7,7 @@ return {
   end,
   keys = {
     "ga", -- Default invocation prefix
-    { "ga.", "<cmd>TextCaseOpenTelescope<CR>", mode = { "n", "x" }, desc = "Telescope" },
+    { "ga/", "<cmd>TextCaseOpenTelescope<CR>", mode = { "n", "x" }, desc = "Search TextCase" },
   },
   cmd = {
     "Subs",
