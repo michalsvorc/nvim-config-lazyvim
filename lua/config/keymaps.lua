@@ -53,8 +53,8 @@ map("v", "<leader>sw", live_grep_args_shortcuts.grep_visual_selection, { desc = 
 map("x", "<leader>d", CompareToClipboard, { desc = "Compare clipboard with visual selection" })
 
 -- Buffers
-map("n", "<leader>bdo", BufferDeleteOthers, { desc = "Delete other buffers" })
 map("n", "<leader>be", ":lua require('telescope.builtin').buffers()<CR>", { desc = "Buffer Explorer" })
+map("n", "<leader>bo", BufferDeleteOthers, { desc = "Delete other buffers" })
 
 -- Disabled
 --- Lazygit Current File History
