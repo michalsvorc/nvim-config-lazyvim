@@ -8,6 +8,7 @@ local map = vim.keymap.set
 --- Lazygit Current File History
 vim.keymap.del("n", "<leader>gf")
 
+-- Telescope
 --- Quickfix list
 map("n", "<leader>sq", function()
   require("telescope.builtin").quickfix()
@@ -24,8 +25,8 @@ map("n", "<leader>sBw", function()
   require("telescope.builtin").grep_string({ grep_open_files = true })
 end, { desc = "Selection (buffers)" })
 
--- Telescope live grep args
--- https://github.com/nvim-telescope/telescope-live-grep-args.nvim
+--- Telescope live grep args
+--- https://github.com/nvim-telescope/telescope-live-grep-args.nvim
 local live_grep_args_shortcuts = require("telescope-live-grep-args.shortcuts")
 
 map("n", "<leader>/", function()
