@@ -4,10 +4,10 @@
 local map = vim.keymap.set
 local wk = require("which-key")
 
--- Disabled
---- Lazygit Current File History
+-- Disable Lazygit default keymaps
+--- Current File History
 vim.keymap.del("n", "<leader>gf")
---- Lazygit terminal utility
+--- Terminal utility
 vim.keymap.del("n", "<leader>ft")
 vim.keymap.del("n", "<leader>fT")
 
