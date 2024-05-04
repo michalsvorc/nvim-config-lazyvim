@@ -10,6 +10,8 @@ vim.keymap.del("n", "<leader>gf")
 --- Terminal utility
 vim.keymap.del("n", "<leader>ft")
 vim.keymap.del("n", "<leader>fT")
+-- NeoTree
+vim.keymap.del("n", "<leader>fe")
 
 -- Telescope
 --- Quickfix list
@@ -68,6 +70,9 @@ map("n", "<leader>ft", function()
     default_text = "term:// ",
   })
 end, { desc = "Find terminal buffers" })
+
+-- File explorer
+map("n", "<leader>fe", ":term yazi<CR>", { desc = "File explorer" })
 
 -- Register which-key group
 wk.register(terminal_wk_group, { prefix = "<leader>" })
