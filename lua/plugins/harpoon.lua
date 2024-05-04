@@ -3,7 +3,7 @@ local function registerWhichKeyGroup()
 
   wk.register({
     h = {
-      name = "harpoon", -- optional group name
+      name = "harpoon",
     },
   }, { prefix = "<leader>" })
 end
