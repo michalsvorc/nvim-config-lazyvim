@@ -4,6 +4,9 @@
 local map = vim.keymap.set
 
 -- Telescope
+-- Disabled
+--- Lazygit Current File History
+vim.keymap.del("n", "<leader>gf")
 
 --- Quickfix list
 map("n", "<leader>sq", function()
@@ -47,6 +50,3 @@ map("x", "<leader>d", CompareToClipboard, { desc = "Compare clipboard with visua
 map("n", "<leader>be", ":lua require('telescope.builtin').buffers()<CR>", { desc = "Buffer Explorer" })
 map("n", "<leader>bo", BufferDeleteOthers, { desc = "Delete other buffers" })
 
--- Disabled
---- Lazygit Current File History
-vim.keymap.del("n", "<leader>gf")
