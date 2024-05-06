@@ -34,15 +34,7 @@ return {
         layout_strategy = "horizontal",
         layout_config = { height = 0.99, width = 0.99 },
       },
-      extensions = {
-        file_browser = {
-          hijack_netrw = true,
-          grouped = true,
-          hidden = { file_browser = true, folder_browser = true },
-        },
-      },
     })
-    require("telescope").load_extension("file_browser")
     require("telescope").load_extension("harpoon")
   end,
 }
