@@ -10,8 +10,6 @@ vim.keymap.del("n", "<leader>gf")
 --- Terminal utility
 vim.keymap.del("n", "<leader>ft")
 vim.keymap.del("n", "<leader>fT")
--- NeoTree
-vim.keymap.del("n", "<leader>fe")
 
 -- Telescope
 --- Quickfix list
