@@ -69,8 +69,5 @@ map("n", "<leader>ft", function()
   })
 end, { desc = "Find terminal buffers" })
 
--- File explorer
-map("n", "<leader>fe", ":term yazi<CR>", { desc = "File explorer" })
-
 -- Register which-key group
 wk.register(terminal_wk_group, { prefix = "<leader>" })
