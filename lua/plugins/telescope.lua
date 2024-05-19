@@ -7,6 +7,11 @@ return {
       "<leader>/",
       false,
     },
+    -- Buffer
+    {
+      "<leader>sb",
+      false,
+    },
     -- Git Commits
     {
       "<leader>gc",
