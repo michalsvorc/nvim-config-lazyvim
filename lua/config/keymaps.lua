@@ -23,6 +23,9 @@ map("n", "<leader>sQ", function()
 end, { desc = "Quickfix history" })
 
 --- Buffers
+map("n", "<leader>/", function()
+  require("telescope.builtin").current_buffer_fuzzy_find()
+end, { desc = "Grep (current buffer)" })
 map("n", "<leader>sBg", function()
   require("telescope.builtin").grep_string({ grep_open_files = true, search = "" })
 end, { desc = "Grep (buffers)" })
@@ -34,9 +37,6 @@ end, { desc = "Selection (buffers)" })
 --- https://github.com/nvim-telescope/telescope-live-grep-args.nvim
 local live_grep_args_shortcuts = require("telescope-live-grep-args.shortcuts")
 
-map("n", "<leader>/", function()
-  require("telescope.builtin").current_buffer_fuzzy_find()
-end, { desc = "Grep (current buffer)" })
 map("n", "<leader>sg", function()
   require("telescope").extensions.live_grep_args.live_grep_args()
 end, { desc = "Grep +args (root dir)" })
