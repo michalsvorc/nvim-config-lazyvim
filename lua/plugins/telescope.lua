@@ -1,67 +1,74 @@
+local function builtin()
+  return require("telescope.builtin")
+end
+
+---@type LazySpec
 return {
   "nvim-telescope/telescope.nvim",
-  dependencies = { "nvim-telescope/telescope-live-grep-args.nvim" },
+  dependencies = { "nvim-telescope/telescope-live-grep-args.nvim", "ThePrimeagen/harpoon" },
   keys = {
-    -- Grep (Root Dir)
-    {
-      "<leader>/",
-      false,
-    },
-    -- Buffer
-    {
-      "<leader>sb",
-      false,
-    },
-    -- Git Commits
+    -- Disable default keymaps
+    --- Git Commits
     {
       "<leader>gc",
       false,
     },
-    -- Git Status
+    --- Git Status
     {
       "<leader>gs",
       false,
     },
-    -- Grep (Root Dir)
+    -- Quickfix list
     {
-      "<leader>sg",
-      false,
+      "<leader>sq",
+      function()
+        builtin().quickfix()
+      end,
+      mode = "n",
+      desc = "Quickfix",
     },
-    -- Grep (cwd)
     {
-      "<leader>sG",
-      false,
+      "<leader>sQ",
+      function()
+        builtin().quickfixhistory()
+      end,
+      mode = "n",
+      desc = "Quickfix history",
     },
-    -- Word (Root Dir)
+    -- Buffers
     {
-      "<leader>sw",
-      false,
+      "<leader>/",
+      function()
+        builtin().current_buffer_fuzzy_find()
+      end,
+      mode = "n",
+      desc = "Grep (current buffer)",
     },
-    -- Word (cwd)
     {
-      "<leader>sW",
-      false,
+      "<leader>sb",
+      function()
+        builtin().grep_string({ grep_open_files = true, search = "" })
+      end,
+      mode = "n",
+      desc = "Grep (buffers)",
     },
-    -- Selection (Root Dir)
     {
-      "<leader>sw",
-      false,
+      "<leader>sb",
+      function()
+        builtin().grep_string({ grep_open_files = true })
+      end,
       mode = "v",
-    },
-    -- Selection (cwd)
-    {
-      "<leader>sW",
-      false,
-      mode = "v",
+      desc = "Selection (buffers)",
     },
   },
   config = function()
-    require("telescope").setup({
+    local telescope = require("telescope")
+    telescope.setup({
       defaults = {
         layout_strategy = "horizontal",
         layout_config = { height = 0.99, width = 0.99 },
       },
     })
-    require("telescope").load_extension("harpoon")
+    telescope.load_extension("harpoon")
   end,
 }

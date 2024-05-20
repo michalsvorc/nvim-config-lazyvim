@@ -13,42 +13,6 @@ vim.keymap.del("n", "<leader>gb")
 vim.keymap.del("n", "<leader>ft")
 vim.keymap.del("n", "<leader>fT")
 
--- Telescope
---- Quickfix list
-map("n", "<leader>sq", function()
-  require("telescope.builtin").quickfix()
-end, { desc = "Quickfix" })
-map("n", "<leader>sQ", function()
-  require("telescope.builtin").quickfixhistory()
-end, { desc = "Quickfix history" })
-
---- Buffers
-map("n", "<leader>/", function()
-  require("telescope.builtin").current_buffer_fuzzy_find()
-end, { desc = "Grep (current buffer)" })
-map("n", "<leader>sb", function()
-  require("telescope.builtin").grep_string({ grep_open_files = true, search = "" })
-end, { desc = "Grep (buffers)" })
-map({ "n", "v" }, "<leader>sB", function()
-  require("telescope.builtin").grep_string({ grep_open_files = true })
-end, { desc = "Selection (buffers)" })
-
---- Telescope live grep args
---- https://github.com/nvim-telescope/telescope-live-grep-args.nvim
-local live_grep_args_shortcuts = require("telescope-live-grep-args.shortcuts")
-
-map("n", "<leader>sg", function()
-  require("telescope").extensions.live_grep_args.live_grep_args()
-end, { desc = "Grep +args (root dir)" })
-map("n", "<leader>sG", function()
-  require("telescope").extensions.live_grep_args.live_grep_args({ cwd = false })
-end, { desc = "Grep +args (cwd)" })
-map("n", "<leader>sw", live_grep_args_shortcuts.grep_word_under_cursor, { desc = "Word +args (root dir)" })
-map("n", "<leader>sW", function()
-  require("telescope-live-grep-args.shortcuts").grep_word_under_cursor({ cwd = false })
-end, { desc = "Word +args (cwd)" })
-map("v", "<leader>sw", live_grep_args_shortcuts.grep_visual_selection, { desc = "Selection +args (root dir)" })
-
 -- Compare clipboard with visual selection
 map("x", "<leader>d", CompareToClipboard, { desc = "Compare clipboard with visual selection" })
 
@@ -57,7 +21,7 @@ map("n", "<leader>be", ":lua require('telescope.builtin').buffers()<CR>", { desc
 map("n", "<leader>bo", BufferDeleteOthers, { desc = "Delete other buffers" })
 
 -- Terminal
-local terminal_wk_group = {
+local wk_group_terminal = {
   t = {
     name = "terminal",
   },
@@ -71,5 +35,4 @@ map("n", "<leader>ft", function()
   })
 end, { desc = "Find terminal buffers" })
 
--- Register which-key group
-wk.register(terminal_wk_group, { prefix = "<leader>" })
+wk.register(wk_group_terminal, { prefix = "<leader>" })
