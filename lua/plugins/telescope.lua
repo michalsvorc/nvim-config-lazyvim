@@ -1,3 +1,13 @@
+local wk = require("which-key")
+wk.register({
+  g = {
+    name = "git",
+    s = {
+      name = "search",
+    },
+  },
+}, { prefix = "<leader>" })
+
 ---@type LazySpec
 return {
   "nvim-telescope/telescope.nvim",
@@ -13,6 +23,49 @@ return {
     {
       "<leader>gs",
       false,
+    },
+    -- Git
+    {
+      "<leader>gsb",
+      function()
+        require("telescope.builtin").git_branches()
+      end,
+      desc = "Branches",
+    },
+    {
+      "<leader>gsc",
+      function()
+        require("telescope.builtin").git_commits()
+      end,
+      desc = "Commits",
+    },
+    {
+      "<leader>gsC",
+      function()
+        require("telescope.builtin").git_bcommits()
+      end,
+      desc = "Buffer commits",
+    },
+    {
+      "<leader>gsr",
+      function()
+        require("telescope.builtin").git_bcommits_range()
+      end,
+      desc = "Buffer commits range",
+    },
+    {
+      "<leader>gss",
+      function()
+        require("telescope.builtin").git_status()
+      end,
+      desc = "Status",
+    },
+    {
+      "<leader>gsS",
+      function()
+        require("telescope.builtin").git_stash()
+      end,
+      desc = "Stash",
     },
     -- Quickfix list
     {
