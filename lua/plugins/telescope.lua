@@ -1,7 +1,3 @@
-local function builtin()
-  return require("telescope.builtin")
-end
-
 ---@type LazySpec
 return {
   "nvim-telescope/telescope.nvim",
@@ -22,7 +18,7 @@ return {
     {
       "<leader>sq",
       function()
-        builtin().quickfix()
+        require("telescope.builtin").quickfix()
       end,
       mode = "n",
       desc = "Quickfix",
@@ -30,7 +26,7 @@ return {
     {
       "<leader>sQ",
       function()
-        builtin().quickfixhistory()
+        require("telescope.builtin").quickfixhistory()
       end,
       mode = "n",
       desc = "Quickfix history",
@@ -39,7 +35,7 @@ return {
     {
       "<leader>/",
       function()
-        builtin().current_buffer_fuzzy_find()
+        require("telescope.builtin").current_buffer_fuzzy_find()
       end,
       mode = "n",
       desc = "Grep (current buffer)",
@@ -47,7 +43,8 @@ return {
     {
       "<leader>sb",
       function()
-        builtin().grep_string({ grep_open_files = true, search = "" })
+        local opts = { grep_open_files = true, search = "" }
+        require("telescope.builtin").grep_string(opts)
       end,
       mode = "n",
       desc = "Grep (buffers)",
@@ -55,7 +52,8 @@ return {
     {
       "<leader>sb",
       function()
-        builtin().grep_string({ grep_open_files = true })
+        local opts = { grep_open_files = true }
+        require("telescope.builtin").grep_string(opts)
       end,
       mode = "v",
       desc = "Selection (buffers)",
