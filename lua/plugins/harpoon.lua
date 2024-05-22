@@ -56,7 +56,7 @@ return {
         harpoon.ui:toggle_quick_menu(harpoon:list())
       end,
       mode = { "n" },
-      desc = "Toggle quick menu",
+      desc = "Menu",
     },
     {
       "<leader>mj",

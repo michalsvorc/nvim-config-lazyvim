@@ -8,7 +8,7 @@ return {
       function()
         vim.cmd("vert Git")
       end,
-      desc = "Git menu",
+      desc = "Menu",
     },
     {
       "<leader>gc",

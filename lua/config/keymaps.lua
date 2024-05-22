@@ -17,7 +17,6 @@ vim.keymap.del("n", "<leader>fT")
 map("x", "<leader>d", CompareToClipboard, { desc = "Compare clipboard with visual selection" })
 
 -- Buffers
-map("n", "<leader>be", ":lua require('telescope.builtin').buffers()<CR>", { desc = "Buffer Explorer" })
 map("n", "<leader>bo", BufferDeleteOthers, { desc = "Delete other buffers" })
 
 -- Terminal
