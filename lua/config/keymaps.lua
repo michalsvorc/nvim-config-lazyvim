@@ -20,6 +20,9 @@ map("x", "<leader>d", CompareToClipboard, { desc = "Compare clipboard with visua
 map("n", "<leader>bs", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 map("n", "<leader>bo", BufferDeleteOthers, { desc = "Delete Other Buffers" })
 
+-- Windows
+map("n", "<leader>wt", "<C-W>T", { desc = "Open Window as a tab" })
+
 -- Terminal
 local wk_group_terminal = {
   t = {
