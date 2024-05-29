@@ -94,6 +94,16 @@ return {
       desc = "Grep (current buffer)",
     },
     {
+      "<leader>bb",
+      function()
+        local theme_opts = { previewer = false, initial_mode = "normal" }
+        local opts = require("telescope.themes").get_dropdown(theme_opts)
+        require("telescope.builtin").buffers(opts)
+      end,
+      mode = "n",
+      desc = "Buffer Explorer",
+    },
+    {
       "<leader>sb",
       function()
         local opts = { grep_open_files = true, search = "" }
@@ -118,6 +128,17 @@ return {
       defaults = {
         layout_strategy = "horizontal",
         layout_config = { height = 0.99, width = 0.99 },
+      },
+      pickers = {
+        buffers = {
+          show_all_buffers = true,
+          sort_lastused = true,
+          mappings = {
+            n = {
+              ["<C-d>"] = "delete_buffer",
+            },
+          },
+        },
       },
     })
   end,
