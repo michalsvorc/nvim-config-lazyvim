@@ -2,10 +2,10 @@
 --
 -- SPDX-License-Identifier: MIT
 
-local wk = require("which-key")
 local root = require("lazyvim.util.root")
 local grep = require("functions.grep")
 local visual = require("functions.visual")
+
 local function live_grep_args(opts)
   return require("telescope").extensions.live_grep_args.live_grep_args(opts)
 end
@@ -31,6 +31,7 @@ local function grep_visual_selection(cwd)
   live_grep_args({ default_text = text, cwd = cwd })
 end
 
+local wk = require("which-key")
 wk.register({
   r = {
     name = "ripgrep",

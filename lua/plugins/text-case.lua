@@ -1,15 +1,11 @@
-local function registerWhichKeyGroup()
-  local wk = require("which-key")
+local wk = require("which-key")
+wk.register({
+  ct = {
+    name = "text-case",
+  },
+}, { prefix = "<leader>" })
 
-  wk.register({
-    ct = {
-      name = "text-case",
-    },
-  }, { prefix = "<leader>" })
-end
-
-registerWhichKeyGroup()
-
+---@type LazySpec
 return {
   "johmsalas/text-case.nvim",
   dependencies = { "nvim-telescope/telescope.nvim" },

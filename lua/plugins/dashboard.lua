@@ -1,3 +1,4 @@
+---@type LazySpec
 return {
   "nvimdev/dashboard-nvim",
   opts = function(_, opts)
