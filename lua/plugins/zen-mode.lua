@@ -2,7 +2,9 @@
 return {
   "folke/zen-mode.nvim",
   opts = {
-    width = 180,
+    window = {
+      width = 140,
+    },
   },
   keys = {
     {
