@@ -29,9 +29,9 @@ local wk_group_terminal = {
     name = "terminal",
   },
 }
-map("n", "<leader>tt", ":term<CR>", { desc = "Terminal buffer" })
-map("n", "<leader>ts", ":split | term<CR>", { desc = "Terminal split" })
-map("n", "<leader>tv", ":vsplit | term<CR>", { desc = "Terminal vsplit" })
+map("n", "<leader>tt", ":vsplit | term<CR>", { desc = "Terminal vertical" })
+map("n", "<leader>ts", ":split | term<CR>", { desc = "Terminal horizontal" })
+map("n", "<leader>tb", ":term<CR>", { desc = "Terminal buffer" })
 map("n", "<leader>ft", function()
   require("telescope.builtin").buffers({
     default_text = "term:// ",
