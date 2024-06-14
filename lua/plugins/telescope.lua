@@ -2,8 +2,8 @@ local wk = require("which-key")
 wk.register({
   g = {
     name = "git",
-    s = {
-      name = "search",
+    f = {
+      name = "find",
     },
   },
 }, { prefix = "<leader>" })
@@ -26,42 +26,42 @@ return {
     },
     -- Git
     {
-      "<leader>gsb",
+      "<leader>gfb",
       function()
         require("telescope.builtin").git_branches()
       end,
       desc = "Branches",
     },
     {
-      "<leader>gsc",
+      "<leader>gfc",
       function()
         require("telescope.builtin").git_commits()
       end,
       desc = "Commits",
     },
     {
-      "<leader>gsC",
+      "<leader>gfC",
       function()
         require("telescope.builtin").git_bcommits()
       end,
       desc = "Buffer commits",
     },
     {
-      "<leader>gsr",
+      "<leader>gfr",
       function()
         require("telescope.builtin").git_bcommits_range()
       end,
       desc = "Buffer commits range",
     },
     {
-      "<leader>gss",
+      "<leader>gfs",
       function()
         require("telescope.builtin").git_status()
       end,
       desc = "Status",
     },
     {
-      "<leader>gsS",
+      "<leader>gfS",
       function()
         require("telescope.builtin").git_stash()
       end,
