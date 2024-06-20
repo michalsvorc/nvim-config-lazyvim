@@ -4,18 +4,25 @@ return {
   lazy = false,
   keys = {
     {
-      "<leader>gg",
-      function()
-        vim.cmd("vert Git")
-      end,
-      desc = "Menu",
-    },
-    {
       "<leader>gc",
       function()
         vim.cmd("vert Git commit")
       end,
       desc = "Commit",
+    },
+    {
+      "<leader>gd",
+      function()
+        vim.cmd("Gvdiffsplit")
+      end,
+      desc = "Diff",
+    },
+    {
+      "<leader>gg",
+      function()
+        vim.cmd("vert Git")
+      end,
+      desc = "Status Menu",
     },
     {
       "<leader>gl",
@@ -32,6 +39,20 @@ return {
       desc = "Log current",
     },
     {
+      "<leader>gp",
+      function()
+        vim.cmd("Git pull")
+      end,
+      desc = "Pull",
+    },
+    {
+      "<leader>gP",
+      function()
+        vim.cmd("Git push")
+      end,
+      desc = "Push",
+    },
+    {
       "<leader>gs",
       function()
         vim.cmd("Git status")
@@ -39,11 +60,11 @@ return {
       desc = "Status",
     },
     {
-      "<leader>gd",
+      "<leader>gw",
       function()
-        vim.cmd("Gvdiffsplit")
+        vim.cmd("Gwrite")
       end,
-      desc = "Diff",
+      desc = "Write",
     },
   },
 }
