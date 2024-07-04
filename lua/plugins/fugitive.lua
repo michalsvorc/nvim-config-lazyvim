@@ -53,6 +53,13 @@ return {
       desc = "Push",
     },
     {
+      "<leader>gR",
+      function()
+        vim.cmd("Gread")
+      end,
+      desc = "Read",
+    },
+    {
       "<leader>gs",
       function()
         vim.cmd("Git status")
