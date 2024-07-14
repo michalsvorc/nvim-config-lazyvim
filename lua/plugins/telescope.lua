@@ -1,5 +1,4 @@
 require("which-key").add({
-  { "<leader>g", group = "git" },
   { "<leader>gf", group = "find" },
 })
 
