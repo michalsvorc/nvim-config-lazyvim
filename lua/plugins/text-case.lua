@@ -1,9 +1,6 @@
-local wk = require("which-key")
-wk.register({
-  ct = {
-    name = "text-case",
-  },
-}, { prefix = "<leader>" })
+require("which-key").add({
+  { "<leader>ct", group = "text-case" },
+})
 
 ---@type LazySpec
 return {

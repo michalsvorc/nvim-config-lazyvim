@@ -1,9 +1,6 @@
-local wk = require("which-key")
-wk.register({
-  m = {
-    name = "marked files",
-  },
-}, { prefix = "<leader>" })
+require("which-key").add({
+  { "<leader>m", group = "marked files" },
+})
 
 local conf = require("telescope.config").values
 local function toggle_telescope(harpoon_files)

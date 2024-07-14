@@ -24,11 +24,6 @@ map("n", "<leader>bo", BufferDeleteOthers, { desc = "Delete Other Buffers" })
 map("n", "<leader>wt", "<C-W>T", { desc = "Open Window as a tab" })
 
 -- Terminal
-local wk_group_terminal = {
-  t = {
-    name = "terminal",
-  },
-}
 map("n", "<leader>tt", ":vsplit | term<CR>", { desc = "Terminal vertical" })
 map("n", "<leader>ts", ":split | term<CR>", { desc = "Terminal horizontal" })
 map("n", "<leader>tb", ":term<CR>", { desc = "Terminal buffer" })
@@ -38,4 +33,6 @@ map("n", "<leader>ft", function()
   })
 end, { desc = "Find terminal buffers" })
 
-wk.register(wk_group_terminal, { prefix = "<leader>" })
+wk.add({
+  { "<leader>t", group = "terminal" },
+})

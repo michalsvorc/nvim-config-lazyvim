@@ -31,12 +31,9 @@ local function grep_visual_selection(cwd)
   live_grep_args({ default_text = text, cwd = cwd })
 end
 
-local wk = require("which-key")
-wk.register({
-  r = {
-    name = "ripgrep",
-  },
-}, { prefix = "<leader>" })
+require("which-key").add({
+  { "<leader>r", group = "ripgrep" },
+})
 
 ---@type LazySpec
 return {

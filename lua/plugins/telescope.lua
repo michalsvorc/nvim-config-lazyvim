@@ -1,12 +1,7 @@
-local wk = require("which-key")
-wk.register({
-  g = {
-    name = "git",
-    f = {
-      name = "find",
-    },
-  },
-}, { prefix = "<leader>" })
+require("which-key").add({
+  { "<leader>g", group = "git" },
+  { "<leader>gf", group = "find" },
+})
 
 ---@type LazySpec
 return {
