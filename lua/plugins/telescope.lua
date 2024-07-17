@@ -122,6 +122,14 @@ return {
       defaults = {
         layout_strategy = "horizontal",
         layout_config = { height = 0.99, width = 0.99 },
+        mappings = {
+          n = {
+            ["<C-p>"] = require("telescope.actions.layout").toggle_preview,
+          },
+          i = {
+            ["<C-p>"] = require("telescope.actions.layout").toggle_preview,
+          },
+        },
       },
       pickers = {
         buffers = {
