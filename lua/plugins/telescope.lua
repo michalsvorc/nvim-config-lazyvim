@@ -1,7 +1,3 @@
-require("which-key").add({
-  { "<leader>gf", group = "find" },
-})
-
 ---@type LazySpec
 return {
   "nvim-telescope/telescope.nvim",
@@ -15,46 +11,46 @@ return {
     },
     -- Git
     {
-      "<leader>gfb",
+      "<leader>gb",
       function()
         require("telescope.builtin").git_branches()
       end,
-      desc = "Branches",
+      desc = "Branches ⌕",
     },
     {
-      "<leader>gfc",
+      "<leader>gC",
       function()
         require("telescope.builtin").git_commits()
       end,
-      desc = "Commits",
+      desc = "Commits ⌕",
     },
     {
-      "<leader>gfC",
+      "<leader>gu",
       function()
         require("telescope.builtin").git_bcommits()
       end,
-      desc = "Buffer commits",
+      desc = "Buffer commits ⌕",
     },
     {
-      "<leader>gfr",
+      "<leader>gU",
       function()
         require("telescope.builtin").git_bcommits_range()
       end,
-      desc = "Buffer commits range",
+      desc = "Buffer commits range ⌕",
     },
     {
-      "<leader>gfs",
-      function()
-        require("telescope.builtin").git_status()
-      end,
-      desc = "Status",
-    },
-    {
-      "<leader>gfS",
+      "<leader>gS",
       function()
         require("telescope.builtin").git_stash()
       end,
-      desc = "Stash",
+      desc = "Stash ⌕",
+    },
+    {
+      "<leader>gF",
+      function()
+        require("telescope.builtin").git_files()
+      end,
+      desc = "Files ⌕",
     },
     -- Quickfix list
     {
