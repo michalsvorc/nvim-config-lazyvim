@@ -13,11 +13,6 @@ return {
       "<leader>gc",
       false,
     },
-    --- Git Status
-    {
-      "<leader>gs",
-      false,
-    },
     -- Git
     {
       "<leader>gfb",

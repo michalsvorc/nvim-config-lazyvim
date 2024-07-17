@@ -62,13 +62,6 @@ return {
       desc = "Read",
     },
     {
-      "<leader>gs",
-      function()
-        vim.cmd("Git status")
-      end,
-      desc = "Status",
-    },
-    {
       key_prefix .. "w",
       function()
         vim.cmd("Gwrite")
