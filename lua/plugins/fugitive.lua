@@ -1,59 +1,61 @@
+local key_prefix = "<leader>g"
+
 ---@type LazySpec
 return {
   "tpope/vim-fugitive",
   lazy = false,
   keys = {
     {
-      "<leader>gc",
+      key_prefix .. "c",
       function()
         vim.cmd("vert Git commit")
       end,
       desc = "Commit",
     },
     {
-      "<leader>gd",
+      key_prefix .. "d",
       function()
         vim.cmd("Gvdiffsplit")
       end,
       desc = "Diff",
     },
     {
-      "<leader>gg",
+      key_prefix .. "g",
       function()
         vim.cmd("vert Git")
       end,
       desc = "Status Menu",
     },
     {
-      "<leader>gl",
+      key_prefix .. "l",
       function()
         vim.cmd("vert Git log")
       end,
       desc = "Log",
     },
     {
-      "<leader>gL",
+      key_prefix .. "L",
       function()
         vim.cmd("vert Git log -- %")
       end,
       desc = "Log current",
     },
     {
-      "<leader>gp",
+      key_prefix .. "p",
       function()
         vim.cmd("Git pull")
       end,
       desc = "Pull",
     },
     {
-      "<leader>gP",
+      key_prefix .. "P",
       function()
         vim.cmd("Git push")
       end,
       desc = "Push",
     },
     {
-      "<leader>gR",
+      key_prefix .. "R",
       function()
         vim.cmd("Gread")
       end,
@@ -67,7 +69,7 @@ return {
       desc = "Status",
     },
     {
-      "<leader>gw",
+      key_prefix .. "w",
       function()
         vim.cmd("Gwrite")
       end,
