@@ -6,6 +6,13 @@ return {
   lazy = false,
   keys = {
     {
+      key_prefix .. "!",
+      function()
+        vim.cmd("Git blame")
+      end,
+      desc = "Blame",
+    },
+    {
       key_prefix .. "c",
       function()
         vim.cmd("vert Git commit")
