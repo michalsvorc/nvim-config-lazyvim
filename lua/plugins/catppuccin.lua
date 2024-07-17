@@ -2,10 +2,11 @@
 return {
   "catppuccin/nvim",
   name = "catppuccin",
+  priority = 1000,
   opts = {
-    custom_highlights = function(C)
+    custom_highlights = function(colors)
       return {
-        WinSeparator = { fg = C.surface2 },
+        WinSeparator = { fg = colors.surface2 },
       }
     end,
   },
