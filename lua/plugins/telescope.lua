@@ -120,8 +120,22 @@ return {
     local telescope = require("telescope")
     telescope.setup({
       defaults = {
-        layout_strategy = "horizontal",
-        layout_config = { height = 0.99, width = 0.99 },
+        layout_strategy = "flex",
+        layout_config = {
+          prompt_position = "bottom",
+          horizontal = {
+            preview_cutoff = 100,
+            preview_width = 0.6,
+          },
+          vertical = {
+            preview_cutoff = 0.4,
+          },
+          flex = {
+            flip_columns = 148,
+          },
+          height = 0.99,
+          width = 0.99,
+        },
         mappings = {
           n = {
             ["<C-p>"] = require("telescope.actions.layout").toggle_preview,
