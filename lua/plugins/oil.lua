@@ -31,6 +31,8 @@ return {
       keymaps = {
         ["gd"] = toggle_detail_view,
         ["gS"] = "actions.change_sort",
+        ["<C-q>"] = "actions.send_to_qflist",
+        ["<A-q>"] = "actions.add_to_qflist",
       },
     })
   end,
