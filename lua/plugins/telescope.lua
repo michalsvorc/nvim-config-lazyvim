@@ -122,7 +122,7 @@ return {
             preview_cutoff = 0.4,
           },
           flex = {
-            flip_columns = 148,
+            flip_columns = 160,
           },
           height = 0.99,
           width = 0.99,
