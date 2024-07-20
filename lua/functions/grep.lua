@@ -7,7 +7,7 @@ local helpers = require("telescope-live-grep-args.helpers")
 local M = {}
 
 M.grep_under_default_opts = {
-  prefix = "-g '!.git/' -F --hidden ",
+  prefix = "-g '!.git/' -. ",
   quote = true,
   trim = true,
 }
