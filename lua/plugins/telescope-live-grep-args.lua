@@ -31,69 +31,67 @@ local function grep_visual_selection(cwd)
   live_grep_args({ default_text = text, cwd = cwd })
 end
 
-require("which-key").add({
-  { "<leader>r", group = "ripgrep" },
-})
+local key_prefix = "<leader>s"
 
 ---@type LazySpec
 return {
   "nvim-telescope/telescope-live-grep-args.nvim",
   keys = {
     {
-      "<leader>rg",
+      key_prefix .. "g",
       function()
         local cwd = root()
         grep_text(cwd)
       end,
       mode = "n",
-      desc = "Grep +args (root dir)",
+      desc = "Grep+ (Root Dir)",
     },
     {
-      "<leader>rG",
+      key_prefix .. "G",
       function()
         local cwd = nil
         grep_text(cwd)
       end,
       mode = "n",
-      desc = "Grep +args (cwd)",
+      desc = "Grep+ (cwd)",
     },
     {
-      "<leader>rw",
+      key_prefix .. "w",
       function()
         local cwd = root()
         grep_word_under_cursor(cwd)
       end,
 
       mode = "n",
-      desc = "Word +args (root dir)",
+      desc = "Selection+ (Root Dir)",
     },
     {
-      "<leader>rW",
+      key_prefix .. "W",
       function()
         local cwd = nil
         grep_word_under_cursor(cwd)
       end,
 
       mode = "n",
-      desc = "Word +args (cwd)",
+      desc = "Selection+ (cwd)",
     },
     {
-      "<leader>rw",
+      key_prefix .. "w",
       function()
         local cwd = root()
         grep_visual_selection(cwd)
       end,
       mode = "v",
-      desc = "Selection +args (root dir)",
+      desc = "Selection+ (Root Dir)",
     },
     {
-      "<leader>rW",
+      key_prefix .. "W",
       function()
         local cwd = nil
         grep_visual_selection(cwd)
       end,
       mode = "v",
-      desc = "Selection +args (cwd)",
+      desc = "Selection+ (cwd)",
     },
   },
 }

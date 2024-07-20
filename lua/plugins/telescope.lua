@@ -3,12 +3,39 @@ return {
   "nvim-telescope/telescope.nvim",
   dependencies = { "nvim-telescope/telescope-live-grep-args.nvim", "ThePrimeagen/harpoon" },
   keys = {
-    -- Disable default keymaps
-    --- Git Commits
+    -- Disabled keys
+
+    --- Grep
+    ---- Grep (Root Dir)
+    {
+      "<leader>sg",
+      false,
+    },
+    ---- Grep (cwd)
+    {
+      "<leader>sG",
+      false,
+    },
+    ---- Selection (Root Dir)
+    {
+      "<leader>sw",
+      mode = "v",
+      false,
+    },
+    ---- Selection (cwd)
+    {
+      "<leader>sW",
+      mode = "v",
+      false,
+    },
+
+    --- Git
+    ---- Git Commits
     {
       "<leader>gc",
       false,
     },
+
     -- Git
     {
       "<leader>gb",
