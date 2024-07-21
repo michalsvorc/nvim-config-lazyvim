@@ -1,7 +1,7 @@
 ---@type LazySpec
 return {
   "nvim-telescope/telescope.nvim",
-  dependencies = { "nvim-telescope/telescope-live-grep-args.nvim", "ThePrimeagen/harpoon" },
+   dependencies = { "nvim-telescope/telescope-live-grep-args.nvim" },
   keys = {
     -- Disabled keys
 
