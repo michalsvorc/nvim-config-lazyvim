@@ -12,6 +12,9 @@ vim.keymap.del("n", "<leader>gb")
 --- Terminal utility
 vim.keymap.del("n", "<leader>ft")
 vim.keymap.del("n", "<leader>fT")
+-- +quit/session
+--- Quit All
+vim.keymap.del("n", "<leader>qq")
 
 -- Compare clipboard with visual selection
 map("x", "<leader>d", CompareToClipboard, { desc = "Compare clipboard with visual selection" })
