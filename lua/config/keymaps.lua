@@ -39,3 +39,7 @@ end, { desc = "Find terminal buffers" })
 wk.add({
   { "<leader>t", group = "terminal" },
 })
+
+-- Quickfix
+-- TODO: Can't override which-key +quit/session group
+map("n", "<leader>q", QuickfixToggle, { desc = "Quickfix Toggle" })
