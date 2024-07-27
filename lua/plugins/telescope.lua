@@ -1,7 +1,7 @@
 ---@type LazySpec
 return {
   "nvim-telescope/telescope.nvim",
-   dependencies = { "nvim-telescope/telescope-live-grep-args.nvim" },
+  dependencies = { "nvim-telescope/telescope-live-grep-args.nvim" },
   keys = {
     -- Disabled keys
 
@@ -162,8 +162,12 @@ return {
             ["<C-p>"] = require("telescope.actions.layout").toggle_preview,
           },
         },
+        file_ignore_patterns = { ".git/" },
       },
       pickers = {
+        find_files = {
+          hidden = true,
+        },
         buffers = {
           show_all_buffers = true,
           sort_lastused = true,
