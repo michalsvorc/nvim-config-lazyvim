@@ -14,3 +14,7 @@ vim.cmd([[
     autocmd TermClose * execute 'bdelete! ' .. expand('<abuf>')
   augroup END
 ]])
+
+-- Load quickfix filter.
+-- https://neovim.io/doc/user/quickfix.html
+vim.cmd("packadd cfilter")
