@@ -15,9 +15,14 @@ vim.keymap.del("n", "<leader>fT")
 -- +quit/session
 --- Quit All
 vim.keymap.del("n", "<leader>qq")
+-- Command history
+vim.keymap.del("n", "<leader>:")
 
 -- Compare clipboard with visual selection
 map("x", "<leader>d", CompareToClipboard, { desc = "Compare clipboard with visual selection" })
+
+-- Commands
+map("n", "<leader>:", ":<C-F>", { desc = "Commands" })
 
 -- Buffers
 map("n", "<leader>bs", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
