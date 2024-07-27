@@ -32,9 +32,9 @@ map("n", "<leader>bo", BufferDeleteOthers, { desc = "Delete Other Buffers" })
 map("n", "<leader>wt", "<C-W>T", { desc = "Open Window as a tab" })
 
 -- Terminal
-map("n", "<leader>tt", ":vsplit | term<CR>", { desc = "Terminal vertical" })
-map("n", "<leader>ts", ":split | term<CR>", { desc = "Terminal horizontal" })
-map("n", "<leader>tb", ":term<CR>", { desc = "Terminal buffer" })
+map("n", "<leader>tt", ":vsplit | lua TerminalOpen()<CR>", { desc = "Terminal vertical" })
+map("n", "<leader>ts", ":split | lua TerminalOpen()<CR>", { desc = "Terminal horizontal" })
+map("n", "<leader>tb", ":lua TerminalOpen()<CR>", { desc = "Terminal as buffer" })
 map("n", "<leader>ft", function()
   require("telescope.builtin").buffers({
     default_text = "term:// ",
@@ -49,4 +49,3 @@ wk.add({
 wk.add({
   { "<leader>q", group = "Quickfix Toggle" },
 })
-map("n", "<leader>q", QuickfixToggle, { desc = "Quickfix Toggle" })
