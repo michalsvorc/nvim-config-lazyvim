@@ -41,5 +41,7 @@ wk.add({
 })
 
 -- Quickfix
--- TODO: Can't override which-key +quit/session group
+wk.add({
+  { "<leader>q", group = "Quickfix Toggle" },
+})
 map("n", "<leader>q", QuickfixToggle, { desc = "Quickfix Toggle" })
