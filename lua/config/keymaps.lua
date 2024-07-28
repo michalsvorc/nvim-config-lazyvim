@@ -32,7 +32,7 @@ map("x", "<leader>d", CompareToClipboard, { desc = "Compare clipboard with visua
 map("n", "<leader>:", ":<C-F>", { desc = "Commands" })
 
 -- Buffers
-map("n", "<leader>,", "<cmd>e #<cr>", { desc = "Switch Buffer" })
+map("n", "<leader>;", "<cmd>e #<cr>", { desc = "Switch Buffer" })
 map("n", "<leader>bo", BufferDeleteOthers, { desc = "Delete Other Buffers" })
 
 -- Windows
