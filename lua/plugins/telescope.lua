@@ -114,7 +114,14 @@ return {
     {
       "<leader>bb",
       function()
-        local theme_opts = { previewer = false, initial_mode = "normal" }
+        local theme_opts = {
+          previewer = false,
+          initial_mode = "normal",
+          layout_config = {
+            width = 0.7,
+            height = 0.5,
+          },
+        }
         local opts = require("telescope.themes").get_dropdown(theme_opts)
         require("telescope.builtin").buffers(opts)
       end,
