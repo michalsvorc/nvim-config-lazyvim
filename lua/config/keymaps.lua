@@ -50,3 +50,5 @@ wk.add({
   { "<leader>q", group = "Quickfix Toggle" },
 })
 map("n", "<leader>q", QuickfixToggle, { desc = "Quickfix Toggle" })
+map("n", "[Q", "<cmd>colder<CR>", { desc = "Previous Quickfix list" })
+map("n", "]Q", "<cmd>cnewer<CR>", { desc = "Next Quickfix list" })
