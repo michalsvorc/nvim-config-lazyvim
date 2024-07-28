@@ -5,6 +5,8 @@ local map = vim.keymap.set
 local wk = require("which-key")
 
 -- Disable default keymaps
+--- grug-far
+vim.keymap.del("n", "<leader>sr")
 --- Lazygit
 vim.keymap.del("n", "<leader>gf")
 vim.keymap.del("n", "<leader>gG")
@@ -58,3 +60,5 @@ map("n", "<leader>q", QuickfixToggle, { desc = "Quickfix Toggle" })
 map("n", "<leader>a", QuickfixAddCurrent, { desc = "Quickfix add current" })
 map("n", "[Q", "<cmd>colder<CR>", { desc = "Previous Quickfix list" })
 map("n", "]Q", "<cmd>cnewer<CR>", { desc = "Next Quickfix list" })
+
+-- Session

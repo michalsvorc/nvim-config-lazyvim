@@ -1,3 +1,5 @@
+local key_prefix = "<leader>s"
+
 ---@type LazySpec
 return {
   "MagicDuck/grug-far.nvim",
@@ -13,7 +15,7 @@ return {
   end,
   keys = {
     {
-      "<leader>r",
+      key_prefix .. "r",
       function()
         require("grug-far").grug_far()
       end,
@@ -21,7 +23,7 @@ return {
       desc = "FaR",
     },
     {
-      "<leader>r",
+      key_prefix .. "r",
       function()
         local opts = {
           prefills = {
@@ -34,7 +36,7 @@ return {
       desc = "FaR (selection)",
     },
     {
-      "<leader>R",
+      key_prefix .. "R",
       function()
         local opts = {
           prefills = {
@@ -47,7 +49,7 @@ return {
       desc = "FaR (current buffer)",
     },
     {
-      "<leader>R",
+      key_prefix .. "R",
       function()
         local opts = {
           prefills = {

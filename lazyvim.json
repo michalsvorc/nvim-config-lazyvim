@@ -1,7 +1,8 @@
 {
   "extras": [
     "lazyvim.plugins.extras.coding.codeium",
-    "lazyvim.plugins.extras.coding.mini-surround"
+    "lazyvim.plugins.extras.coding.mini-surround",
+    "lazyvim.plugins.extras.editor.refactoring"
   ],
   "news": {
     "NEWS.md": "6520"

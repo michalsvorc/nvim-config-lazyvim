@@ -5,6 +5,12 @@ return {
   keys = {
     -- Disabled keys
 
+    --- Search
+    ---- Resume
+    {
+      "<leader>sR",
+      false,
+    },
     --- Grep
     ---- Grep (Root Dir)
     {
@@ -35,7 +41,7 @@ return {
       "<leader>gc",
       false,
     },
-
+    { "<leader>s.", "<cmd>Telescope resume<cr>", desc = "Resume" },
     -- Git
     {
       "<leader>gb",
