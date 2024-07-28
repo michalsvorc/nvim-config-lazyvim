@@ -12,11 +12,16 @@ vim.keymap.del("n", "<leader>gb")
 --- Terminal utility
 vim.keymap.del("n", "<leader>ft")
 vim.keymap.del("n", "<leader>fT")
--- +quit/session
---- Quit All
+--- +quit/session
+---- Quit All
 vim.keymap.del("n", "<leader>qq")
--- Command history
+--- Command history
 vim.keymap.del("n", "<leader>:")
+--- Buffers
+---- Switch Buffer
+vim.keymap.del("n", "<leader>,")
+---- Switch to Other Buffer
+vim.keymap.del("n", "<leader>`")
 
 -- Compare clipboard with visual selection
 map("x", "<leader>d", CompareToClipboard, { desc = "Compare clipboard with visual selection" })
@@ -25,7 +30,7 @@ map("x", "<leader>d", CompareToClipboard, { desc = "Compare clipboard with visua
 map("n", "<leader>:", ":<C-F>", { desc = "Commands" })
 
 -- Buffers
-map("n", "<leader>bs", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
+map("n", "<leader>,", "<cmd>e #<cr>", { desc = "Switch Buffer" })
 map("n", "<leader>bo", BufferDeleteOthers, { desc = "Delete Other Buffers" })
 
 -- Windows
