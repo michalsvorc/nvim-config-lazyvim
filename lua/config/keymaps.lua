@@ -62,3 +62,16 @@ wk.add({
 })
 map("n", "<leader>Ss", "<cmd>mksession!<CR>", { desc = "Session Save" })
 map("n", "<leader>Sl", "<cmd>source Session.vim<CR>", { desc = "Session Load" })
+
+-- Window
+map(
+  "n",
+  "<leader>w,",
+  ":exe '1wincmd w | wincmd '.(winwidth(0) == &columns ? 'H' : 'K')<CR>",
+  { desc = "Swap Ve/Ho Split" }
+)
+map("n", "<leader>wH", "<C-W>H", { desc = "Window Move Left" })
+map("n", "<leader>wJ", "<C-W>J", { desc = "Window Move Down" })
+map("n", "<leader>wK", "<C-W>K", { desc = "Window Move Up" })
+map("n", "<leader>wL", "<C-W>L", { desc = "Window Move Right" })
+map("n", "<leader>w.", "<C-W>o<C-W>v<CR>", { desc = "Current Only Vertical Split" })
