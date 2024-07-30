@@ -15,11 +15,7 @@ vim.keymap.del("n", "<leader>fT")
 --- +quit/session
 ---- Quit All
 vim.keymap.del("n", "<leader>qq")
---- Command history
-vim.keymap.del("n", "<leader>:")
 --- Buffers
----- Switch Buffer
-vim.keymap.del("n", "<leader>,")
 ---- Switch to Other Buffer
 vim.keymap.del("n", "<leader>`")
 

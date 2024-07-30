@@ -3,8 +3,7 @@ return {
   "nvim-telescope/telescope.nvim",
   dependencies = { "nvim-telescope/telescope-live-grep-args.nvim" },
   keys = {
-    -- Disabled keys
-
+    -- Disabled keys START
     --- Search
     ---- Resume
     {
@@ -34,14 +33,29 @@ return {
       mode = "v",
       false,
     },
-
+    --- Command history
+    {
+      "<leader>:",
+      false,
+    },
+    --- Buffers
+    ---- Switch Buffer
+    {
+      "<leader>,",
+      false,
+    },
     --- Git
     ---- Git Commits
     {
       "<leader>gc",
       false,
     },
-    { "<leader>s.", "<cmd>Telescope resume<cr>", desc = "Resume" },
+    --- Disabled keys END
+    {
+      "<leader>s.",
+      "<cmd>Telescope resume<cr>",
+      desc = "Resume",
+    },
     -- Git
     {
       "<leader>gb",
