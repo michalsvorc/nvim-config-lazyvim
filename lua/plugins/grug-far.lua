@@ -14,6 +14,13 @@ return {
     })
   end,
   keys = {
+    -- Disabled keys START
+    --- Search and Replace
+    {
+      "<leader>sr",
+      false,
+    },
+    -- Disabled keys END
     {
       key_prefix .. "r",
       function()

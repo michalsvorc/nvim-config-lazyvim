@@ -5,8 +5,6 @@ local map = vim.keymap.set
 local wk = require("which-key")
 
 -- Disable default keymaps
---- grug-far
-vim.keymap.del("n", "<leader>sr")
 --- Lazygit
 vim.keymap.del("n", "<leader>gf")
 vim.keymap.del("n", "<leader>gG")
