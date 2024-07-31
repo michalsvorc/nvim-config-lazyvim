@@ -56,13 +56,6 @@ map("n", "<leader>a", QuickfixAddCurrent, { desc = "Quickfix add current" })
 map("n", "[Q", "<cmd>colder<CR>", { desc = "Previous Quickfix list" })
 map("n", "]Q", "<cmd>cnewer<CR>", { desc = "Next Quickfix list" })
 
--- Session
-wk.add({
-  { "<leader>S", group = "Session" },
-})
-map("n", "<leader>Ss", "<cmd>mksession!<CR>", { desc = "Session Save" })
-map("n", "<leader>Sl", "<cmd>source Session.vim<CR>", { desc = "Session Load" })
-
 -- Window
 map(
   "n",
