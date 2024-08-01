@@ -1,4 +1,5 @@
 require("functions.buffers")
+require("functions.path")
 require("functions.clipboard")
 require("functions.path")
 require("functions.quickfix")

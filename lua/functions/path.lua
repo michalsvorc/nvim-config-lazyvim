@@ -1,3 +1,8 @@
+local function get_project_root()
+  local root = LazyVim.root.get({ normalize = true })
+  return root
+end
+
 PrintDirForCurrentWindow = function()
   local oil_ok, oil = pcall(require, "oil")
   local oil_path = nil
@@ -22,3 +27,7 @@ PrintDirForCurrentWindow = function()
     end
   end
 end
+
+return {
+  get_project_root = get_project_root,
+}

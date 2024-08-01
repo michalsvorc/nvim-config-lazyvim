@@ -68,3 +68,7 @@ map("n", "<leader>wJ", "<C-W>J", { desc = "Window Move Down" })
 map("n", "<leader>wK", "<C-W>K", { desc = "Window Move Up" })
 map("n", "<leader>wL", "<C-W>L", { desc = "Window Move Right" })
 map("n", "<leader>w.", "<C-W>o<C-W>v<CR>", { desc = "Current Only Vertical Split" })
+
+-- Sessions
+map({ "n", "v" }, "<leader>Ss", "<cmd>SessionSave<cr>", { desc = "Session Save" })
+map({ "n", "v" }, "<leader>Sl", "<cmd>SessionLoad<cr>", { desc = "Session Load" })
