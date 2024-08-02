@@ -33,10 +33,10 @@ map("n", "<leader>bo", "<cmd>BufferDeleteOthers<cr>", { desc = "Delete Other Buf
 map("n", "<leader>wt", "<C-W>T", { desc = "Open Window as a tab" })
 
 -- Terminal
-map("n", "<leader>tt", ":vsplit | lua TerminalOpen()<CR>", { desc = "Terminal vertical" })
-map("n", "<leader>tT", ":vsplit | terminal<CR>", { desc = "Terminal vertical (cwd)" })
-map("n", "<leader>ts", ":split | lua TerminalOpen()<CR>", { desc = "Terminal horizontal" })
-map("n", "<leader>tb", ":lua TerminalOpen()<CR>", { desc = "Terminal as buffer" })
+map("n", "<leader>tt", "<cmd>vsplit | TerminalOpen<CR>", { desc = "Terminal vertical" })
+map("n", "<leader>tT", "<cmd>vsplit | terminal<CR>", { desc = "Terminal vertical (cwd)" })
+map("n", "<leader>ts", "<cmd>split | TerminalOpen<CR>", { desc = "Terminal horizontal" })
+map("n", "<leader>tb", "<cmd>TerminalOpen<CR>", { desc = "Terminal as buffer" })
 map("n", "<leader>ft", function()
   require("telescope.builtin").buffers({
     default_text = "term:// ",
