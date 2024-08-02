@@ -27,7 +27,7 @@ map("n", "<leader>:", ":<C-F>", { desc = "Commands" })
 
 -- Buffers
 map("n", "<leader>,", "<cmd>e #<cr>", { desc = "Switch Buffer" })
-map("n", "<leader>bo", BufferDeleteOthers, { desc = "Delete Other Buffers" })
+map("n", "<leader>bo", "<cmd>BufferDeleteOthers<cr>", { desc = "Delete Other Buffers" })
 
 -- Windows
 map("n", "<leader>wt", "<C-W>T", { desc = "Open Window as a tab" })
