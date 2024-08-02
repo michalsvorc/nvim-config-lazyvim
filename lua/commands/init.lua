@@ -1,5 +1,5 @@
 require("commands.clipboard")
-require("commands.buffers")
+require("commands.buffer")
 require("commands.quickfix")
 require("commands.sessions")
 require("commands.terminal")
