@@ -3,7 +3,7 @@ local function get_project_root()
   return root
 end
 
-PrintDirForCurrentWindow = function()
+local function get_current_window()
   local oil_ok, oil = pcall(require, "oil")
   local oil_path = nil
 
@@ -30,4 +30,5 @@ end
 
 return {
   get_project_root = get_project_root,
+  get_current_window = get_current_window,
 }
