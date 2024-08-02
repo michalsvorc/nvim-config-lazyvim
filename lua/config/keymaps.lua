@@ -20,7 +20,7 @@ vim.keymap.del("n", "<leader>qq")
 vim.keymap.del("n", "<leader>`")
 
 -- Compare clipboard with visual selection
-map("x", "<leader>d", CompareToClipboard, { desc = "Compare clipboard with visual selection" })
+map("x", "<leader>d", "<cmd>CompareToClipboard<cr>", { desc = "Compare clipboard with visual selection" })
 
 -- Commands
 map("n", "<leader>:", ":<C-F>", { desc = "Commands" })
