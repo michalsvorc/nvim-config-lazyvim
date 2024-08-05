@@ -1,3 +1,8 @@
+local function get_cwd()
+  local cwd = vim.fn.getcwd()
+  return vim.fn.fnameescape(cwd)
+end
+
 local function get_project_root()
   local root = LazyVim.root.get({ normalize = true })
   return root
@@ -16,19 +21,20 @@ local function get_current_window()
   else
     local buffer_name = vim.fn.expand("%")
     if string.match(buffer_name, "^fugitive://") then
-      return vim.fn.fnameescape(vim.fn.getcwd())
+      return get_cwd()
     end
 
     local buffer_path = vim.fn.expand("%:p:h")
     if buffer_path and buffer_path ~= "" then
       return vim.fn.fnameescape(buffer_path)
     else
-      return vim.fn.fnameescape(vim.fn.getcwd())
+      return get_cwd()
     end
   end
 end
 
 return {
+  get_cwd = get_cwd,
   get_project_root = get_project_root,
   get_current_window = get_current_window,
 }

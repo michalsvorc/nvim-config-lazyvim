@@ -3,6 +3,7 @@
 -- Add any additional keymaps here
 local map = vim.keymap.set
 local wk = require("which-key")
+local paths = require("functions.path")
 
 -- Disable default keymaps
 --- Lazygit
@@ -33,8 +34,13 @@ map("n", "<leader>bo", "<cmd>BufferDeleteOthers<cr>", { desc = "Delete Other Buf
 map("n", "<leader>wt", "<C-W>T", { desc = "Open Window as a tab" })
 
 -- Terminal
-map("n", "<leader>tt", "<cmd>vsplit | TerminalOpen<CR>", { desc = "Terminal vertical" })
-map("n", "<leader>tT", "<cmd>vsplit | terminal<CR>", { desc = "Terminal vertical (cwd)" })
+map("n", "<leader>tt", "<cmd>split | TerminalOpen<CR>", { desc = "Terminal" })
+map("n", "<leader>tT", function()
+  vim.cmd("vsplit | TerminalOpen " .. paths.get_cwd())
+end, { desc = "Terminal (cwd)" })
+map("n", "<leader>tt", function()
+  vim.cmd("vsplit | TerminalOpen " .. paths.get_project_root())
+end, { desc = "Terminal (root)" })
 map("n", "<leader>ts", "<cmd>split | TerminalOpen<CR>", { desc = "Terminal horizontal" })
 map("n", "<leader>tb", "<cmd>TerminalOpen<CR>", { desc = "Terminal as buffer" })
 map("n", "<leader>ft", function()
