@@ -4,19 +4,19 @@ local regname = "+"
 -- Copy current buffer path
 vim.api.nvim_create_user_command("CopyBufferAbsolutePath", function()
   local path = vim.fn.expand("%:p")
-  vim.fn.setreg("+", path)
+  vim.fn.setreg(regname, path)
   print("Copied: " .. path)
 end, {})
 
 vim.api.nvim_create_user_command("CopyBufferFileName", function()
-  local path = vim.fn.expand("%:t")
-  vim.fn.setreg("+", path)
-  print("Copied: " .. path)
+  local filename = vim.fn.expand("%:t")
+  vim.fn.setreg(regname, filename)
+  print("Copied: " .. filename)
 end, {})
 
-vim.api.nvim_create_user_command("CopyBufferPathRelativeToCwd", function()
+vim.api.nvim_create_user_command("CopyBufferCwdPath", function()
   local path = vim.fn.expand("%:p:~:.")
-  vim.fn.setreg("+", path)
+  vim.fn.setreg(regname, path)
   print("Copied: " .. path)
 end, {})
 
