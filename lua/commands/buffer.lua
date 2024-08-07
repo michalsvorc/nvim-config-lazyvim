@@ -1,4 +1,5 @@
 local paths = require("functions.path")
+local regname = "+"
 
 -- Copy current buffer path
 vim.api.nvim_create_user_command("CopyBufferAbsolutePath", function()
@@ -19,10 +20,12 @@ vim.api.nvim_create_user_command("CopyBufferPathRelativeToCwd", function()
   print("Copied: " .. path)
 end, {})
 
-vim.api.nvim_create_user_command("CopyBufferPathRelativeToProjectPath", function()
-  local path = paths.get_project_root()
-  vim.fn.setreg("+", path)
-  print("Copied: " .. path)
+vim.api.nvim_create_user_command("CopyBufferProjectRootPath", function()
+  local project_root_path = paths.get_project_root()
+  local current_buffer_path = vim.api.nvim_buf_get_name(0)
+  local relative_path = vim.fn.fnamemodify(current_buffer_path, ":." .. project_root_path)
+  vim.fn.setreg(regname, relative_path)
+  print("Copied: " .. relative_path)
 end, {})
 
 -- Close other buffers except the current one
